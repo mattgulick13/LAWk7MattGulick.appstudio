@@ -1,6 +1,7 @@
  btnDelete.onclick = function() {
    let nameDelete = inptCustomerDelete.value
    let found = false
+   req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=" + query)
    for (i = 0; i < results.length; i++) {
      if (customerNameDel == results[i][1]) {
        found = true
