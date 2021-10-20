@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnUpdate",
-  "left": 133,
+  "left": 112,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 222,
+  "top": 303,
   "value": "Update",
   "width": "auto"
 }
