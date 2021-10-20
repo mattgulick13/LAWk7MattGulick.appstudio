@@ -1,18 +1,19 @@
-btnSubmit.onclick=function(){
-  name = inptName.value
-  address = inptAddress.value
-  city = inptCity.value
-  state = inptState.value
-  zipcode = inptZipcode.value
-  query = "INSERT INTO customer (name,street,city,state,zipcode) VALUES ('" + name + "', '" + address + "', '" + city + "', '" + state + "', '" + zip + "')"
-  alert(query)
+customerSelect.onshow = function() {
+  query = "SELECT * FROM customer"
+  req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=" + netID + "&query=" + query)
 
-  req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=" + query)
-  if (req.status == 200) {
-    if (req.responseText == 500)
-      Label1.value = "You have added the pet!"
-    else
-      Label1.value = "There was a problem with adding the pet to the database."
-  } else
-    Label1.value = "Error: " + req.status
+  if (req.status == 200) { 
+    results = JSON.parse(req.responseText)
+    console.log(`the results are \n ${results}`)
+    if (results.length == 0)
+      lblMessage.value = "There are no customers in the database."
+    else {
+      let message = ""
+      for (i = 0; i < results.length; i++)
+        message = message + results[i][1] + "\n"
+      lblCustomerName.value = message
+    } 
+
+  } else 
+    lblMessage.value = "Error code: " + req.status
 }
