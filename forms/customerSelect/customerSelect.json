@@ -16,16 +16,7 @@
         "forms",
         "customerSelect",
         "Elements",
-        "btnSubmit.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "customerSelect",
-        "Elements",
-        "lbl1.json"
+        "lblCustomerName.json"
       ]
     }
   ],
