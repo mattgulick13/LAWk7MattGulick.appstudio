@@ -1,0 +1,5 @@
+let req = ""
+let query = ""
+let results = ""
+let netID = "mtg52202"
+let pw = "P!eman13"
