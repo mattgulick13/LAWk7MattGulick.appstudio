@@ -6,7 +6,7 @@ customerUpdate.onshow = function() {
     let message = ""
     for (i = 0; i < results.length; i++)
       message = message + results[i][1] + "\n"
-    txtCustomerName.value = message
+    inptCustomerUpdate.value = message
   }
 }
 btnUpdate.onclick = function() {
@@ -21,11 +21,11 @@ btnUpdate.onclick = function() {
       req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=" + query)
       if (req.status == 200)
         if (req.responseText == 500)
-          Lablel2.value = `You have updated ${oldName} to ${updatedName}.`
+          lbl3.value = `You have updated ${oldName} to ${updatedName}.`
       else
-        Label2.value = `There was a problem updating ${oldName} to ${updatedName}.`
+        lbl3.value = `There was a problem updating ${oldName} to ${updatedName}.`
       else
-        Label2.value = `Error: ${req.status}`
+        lbl3.value = `Error: ${req.status}`
     }
   }
 }
