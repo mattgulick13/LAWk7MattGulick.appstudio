@@ -18,6 +18,24 @@
         "Elements",
         "btnUpdate.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "customerUpdate",
+        "Elements",
+        "lbl3.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "customerUpdate",
+        "Elements",
+        "inptCustomerUpdate.json"
+      ]
     }
   ],
   "class": "",
